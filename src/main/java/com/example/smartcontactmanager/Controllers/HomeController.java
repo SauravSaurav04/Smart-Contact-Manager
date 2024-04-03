@@ -83,4 +83,7 @@ public class HomeController {
         model.addAttribute("title", "Login - SCM");
         return "login";
     }
+    static void fun(){
+
+    }
 }
