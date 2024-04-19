@@ -4,12 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>user-dashboard</title>
+    <style>
+        .menu {
+            background-color: #333;
+            color: #fff;
+            width: 150px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align items to the left */
+            justify-content: flex-start; /* Align content to the top */
+            padding: 20px; /* Add padding for better appearance */
+        }
+        .menu-item {
+            margin-bottom: 20px;
+        }
+        .menu-item a {
+            color: #fff; /* White text color for menu items */
+            text-decoration: none; /* Remove underline from links */
+            font-weight: bold; /* Make text bold */
+        }
+    </style>
 </head>
 <body>
     <h1>Hello world from about page body</h1>
     <section>
-        <h1>Hello world from User Dashboard page section</h1>
         <h1>This is your private Dashboard</h1>
+        <div class="menu">
+            <div class="menu-item"><a href="#" th:href="@{/user/index}">Home</a></div>
+            <div class="menu-item"><a href="#" th:href="@{/user/show-contacts/0}">View Contacts</a></div>
+            <div class="menu-item"><a href="#" th:href="@{/user/add-contact}">Add Contact</a></div>
+            <div class="menu-item"><a href="#">Your Profile</a></div>
+            <div class="menu-item"><a href="#">Settings</a></div>
+            <div class="menu-item"><a href="#" th:href="@{/logout}">Logout</a></div>
+        </div>
     </section>
 </body>
 </html>
