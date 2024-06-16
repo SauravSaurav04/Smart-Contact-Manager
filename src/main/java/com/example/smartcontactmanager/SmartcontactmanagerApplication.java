@@ -10,5 +10,4 @@ public class SmartcontactmanagerApplication {
 		SpringApplication.run(SmartcontactmanagerApplication.class, args);
 		System.out.println("Started...");
 	}
-
 }
